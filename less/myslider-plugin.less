@@ -1,0 +1,217 @@
+// out: ../css/myslider-plugin.css
+
+.main-container {
+    display: block;
+    margin: 50px auto;
+    position: relative;
+    background-color: #eee;
+    border-radius: 3%;
+    box-shadow: 0px 5px 200px rgba(0,0,0,0.2);
+    
+    
+     .slide {
+        position: absolute;
+        bottom: 3%;
+        left: 50%;
+        width: 15%;
+        height: 20%;
+        display: block;
+        transition: 0.2s ease all;
+        border-radius: 3%;
+        box-shadow: 0px 5px 20px rgba(0,0,0,0.5);
+        
+        
+        &:hover {
+            height: 23%;
+            border: 2px #ccc solid;
+        }
+        
+        &.active {
+            height: 23%;
+            border: 2px solid;
+        }
+         
+        &.general {
+            height: 30%;
+                 
+            &:hover {
+                height: 35%;
+                z-index: 5000 !important;
+            }
+            &.active {
+                height: 35%;
+                z-index: 4999 !important;
+            }
+         }
+        &.tape-general {
+            height: 40%;
+                 
+            &:hover {
+                height: 46%;
+                z-index: 5000 !important;
+            }
+            &.active {
+                height: 46%;
+                z-index: 4999 !important;
+            }
+         }
+         
+        > div {
+            height: 100%;
+            width: 100%;
+            display: block;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 3%;
+        }   
+    }
+    
+    .general-slide {
+        top: 5%;
+        left: 50%;
+        position: absolute;
+        transform: translateX(-50%);
+        width: 35%;
+        height: 45%;
+        border-radius: 3%;
+        box-shadow: 0px 0px -5px rgba(0,0,0,0.2);
+        
+        &.tape {
+            top: 10%;
+        }
+        
+        &.column {
+            top: 20%; 
+        }
+        
+        > div {
+            height: 100%;
+            width: 100%;
+            display: block;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 3%;
+        }  
+    }
+    
+    .btn-play-pause {
+        position: absolute;
+        border: 2px solid #000;
+        opacity: 0.2;
+        width: 25px;
+        height: 25px;
+        border-radius: 100%;
+        top: 55%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-image: url(../img/items/pause-solid.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 40%;
+        cursor: pointer;
+        box-shadow: 0px 5px 20px rgba(0,0,0,0.9);
+        transition: all ease 0.3s;
+        
+        &.general {
+            right: 3%;
+            top: 26%;
+        }
+        
+        &.column {
+            top: 75%;
+        }
+        
+        &.tape {
+            top: 58%;
+        }
+        &.tape-general {
+            top: 85%;
+        }
+        
+        &.pause {
+            background-image: url(../img/items/play-solid.svg);
+            border-radius: 20%;
+        }
+    }
+    
+    .arrows {
+        position: absolute;
+        top: 20%;
+        border: 2px solid #000;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 50%;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        opacity: 0.2;
+        box-shadow: 0px 5px 20px rgba(0,0,0,0.5);
+        border-radius: 100%;
+        
+ 
+        &.right-arrow {
+            right: 17%;
+            background-image: url(../img/items/angle-right-solid.svg);
+            
+            &.general {
+                right: 3%;
+                top: 26%;
+            }
+            
+            &.column {
+                right: 40%;
+                top: 75%;
+                transform: rotate(-90deg);
+            }
+            
+            &.column-general {
+                right: 20%;
+                top: 3%;
+            }
+            
+            &.tape {
+                right: 5%;
+                top: 75%;
+            }
+            &.tape-general {
+                right: 3%;
+                top: 52%;
+            }  
+        }
+        
+        &.left-arrow {
+            left: 17%;
+            background-image: url(../img/items/angle-right-solid.svg);
+            transform: rotate(180deg);
+            box-shadow: 0px -5px 20px rgba(0,0,0,0.5);
+            
+            &.general {
+                left: 3%;
+                top: 26%;
+            }
+            
+            &.column {
+                left: 40%;
+                top: 75%;
+                transform: rotate(90deg);
+            }
+            
+            &.column-general {
+                left: 20%;
+                top: 3%;
+            }
+            
+            &.tape {
+                left: 5%;
+                top: 75%;
+            }
+               &.tape-general {
+                left: 3%;
+                top: 52%;
+            }
+        }
+    }  
+}
+
